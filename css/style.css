@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    font-size: 100px;
+    margin: 0;
+    height: 100vh;
+}
+
+.countdown {
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+.number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: countdown 1s linear forwards;
+    white-space: nowrap;
+}
+
+#number10 { animation-delay: 0s; }
+#number9  { animation-delay: 1s; }
+#number8  { animation-delay: 2s; }
+#number7  { animation-delay: 3s; }
+#number6  { animation-delay: 4s; }
+#number5  { animation-delay: 5s; }
+#number4  { animation-delay: 6s; }
+#number3  { animation-delay: 7s; }
+#number2  { animation-delay: 8s; }
+#number1  { animation-delay: 9s; }
+#finalText { animation: finalText 1s linear forwards;
+             animation-delay: 10s; }
+
+@keyframes countdown {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes finalText {
+    0% { opacity: 0;}
+    100% {opacity: 1;}
+}
